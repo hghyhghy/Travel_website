@@ -1,0 +1,955 @@
+
+@font-face {
+  font-family:nb;
+  src: url(./Rejouice-Headline\ \(1\).ttf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "montserrat";
+    color:aquamarine;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+  }
+#cursor {
+  height: 20px;
+  width: 20px;
+  background-color: #95c11e;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 99;
+  transition: all linear 0.1s;
+}
+#cursor-blur {
+  height: 500px;
+  width: 500px;
+  background-color: rgba(150, 193, 30, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(80px);
+  z-index: 9;
+  transition: all linear 0.4s;
+}
+#nav {
+    height: 120px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 0 150px;
+    gap: 50px;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 99;
+    
+}
+
+#nav img {
+    height: 75px;
+}
+
+#nav h4 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: nb;
+  margin-left: 10vh;
+  justify-content: space-around;
+  gap: 25vh;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+
+}
+
+#main {
+  position: relative;
+background-color: rgba(0,0,0,0.5);
+
+}
+
+#page1 {
+
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 10;
+  
+}
+
+#page1 h1 {
+top: 30vh;
+font-family: nb;
+font-size: 120px;
+font-weight: 500;
+position: relative;
+}
+
+#page1 h1::before {
+  content: "EAT. EXPLORE. TRAVEL";
+  position: absolute;
+  color:#000;
+  top: -6px;
+  left: -8px;
+  -webkit-text-stroke: 0px red;
+}
+ 
+
+#page1 h2 {
+  margin-top: 30vh;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  /* margin-top: 10px;
+  margin-bottom: 20px; */
+  left: 13.5vh;
+  color:#FFD700;
+  }
+  
+
+#page1 p {
+  margin-top: 1%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    width: 30%;
+}
+
+#page1 #arrow {
+  height: 100px;
+  width: 100px;
+  background-color: transparent;
+  border: 2px solid #95c11e;
+  position: absolute;
+  display: flex;
+  left: 1%;
+  bottom: 3%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all ease 0.5s;
+  
+}
+
+ 
+#page1 #arrow  i {
+  font-size: 50px;
+}
+
+ 
+#page1 #arrow:hover {
+  scale: 0.5;
+  background-color: #95c11e;
+}
+
+#page2 {
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+
+#scroller {
+  position: relative;
+  top: -2vh;
+  /* background-color: red; */
+white-space: nowrap;
+overflow-x: auto;
+overflow-y: hidden;
+position: relative;
+z-index: 10;
+}
+
+#scroller::-webkit-scrollbar{
+  display: none;
+}
+
+#scroller-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: scroll;
+  animation-duration: 20s;
+  color: #fff;
+  animation-timing-function:linear;
+  animation-iteration-count: infinite;
+
+
+}
+
+
+
+#scroller h4 {
+  top: 55%;
+  display: inline-block;
+  font-size: 100px;
+  font-weight: 900;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-right: 10px;
+  transition:  all linear 0.7s;
+  color: transparent;
+  -webkit-text-stroke:  2px #fff;
+}
+
+#scroller h4:hover {
+  color: #95c11e;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+
+  }
+  
+}
+
+#about-us {
+position: relative;
+z-index: 10;
+height: 40vh;
+width: 100%;
+top: 25%;
+/* background-color: red; */
+display: flex;
+align-items: center;
+padding: 0 50px;
+justify-content: space-around;
+transition:all ease-in 0.6s;
+
+
+
+}
+
+#about-us img{
+  height:220px;
+  width:220px;
+  border-radius: 40px;
+  object-fit: cover;
+
+}
+
+#about-us-in {
+  width: 50%;
+  text-align: center;
+  transition:all ease-in 0.6s;
+
+}
+
+#about-us-in h3{
+  font-size: 54px;
+  font-weight: 800;
+  font-family:nb;
+  margin-bottom: 30px;
+}
+
+#about-us-in p {
+  font-size: 20px;
+  line-height: 26px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#cards-container {
+  position: relative;
+  top: 28%;
+  height: 60vh;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 70px;
+  /* background-size:cover;
+  background-position: center; */
+  z-index: 10;
+}
+
+.card{
+  height: 80%;
+  width: 24%;
+  /* background-color: blue; */
+  border-radius: 20px;
+  overflow: hidden;
+  background-size:cover;
+  background-position: center;
+  transition: all ease 0.6s;
+
+}
+
+#card1 {
+  background-image: url(n.png);
+  background-size:cover;
+  background-position:bottom;
+}
+
+
+#card1:hover {
+  transform: rotate3d(1,-1,0,20deg);
+}
+
+
+
+#card3 {
+  background-image: url(n4.jpg);
+  background-size:cover;
+  background-position: center;
+}
+
+ 
+#card3:hover {
+  transform: rotate3d(-1,-1,0,20deg);
+}
+
+ 
+#card2 {
+  background-image: url(n1.jfif);
+  background-size:cover;
+  background-position: center;
+}
+
+
+#card2:hover {
+  transform: rotate3d(-1,-1,-1,20deg);
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #95c11e;
+  padding: 30px;
+  padding-top: 100px;
+  opacity:0;
+  transition:all ease-in 0.6s;
+
+}
+
+
+.overlay p {
+  color: #000;
+  font-size: 18px;
+ 
+}
+
+.overlay h4 {
+  color: #000;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: nb;
+  margin-bottom: 20px;
+}
+
+.card:hover .overlay{
+  opacity: 1;
+}
+/* 
+.card:hover {
+  transform: rotate3d(1,-1,0,20deg);
+} */
+
+#about-us img:hover {
+  transform: rotate3d(1,1,0,20deg);
+
+}
+
+#green-div {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:linear-gradient(black,hsl(267, 93%, 6%));
+}
+
+#green-div h4 {
+  width: 45%;
+  line-height: 50px;
+  text-align: center;
+  color:wheat;
+  font-weight: 800;
+  font-size: 27px;
+  text-transform: uppercase;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#green-div img {
+  height: 100%;
+  object-fit: cover;
+  width: 9%;
+}
+
+#green-div h4:hover{
+  transition: all ease-in-out 0.5s;
+  transform: rotate3d(-1,-1,0,20deg);
+
+}
+
+#about-us-in h3{
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out  alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #e60073, 0 0 30px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 50px #ff4da6, 0 0 50px #ff4da6, 0 0 50px #ff4da6;
+  }
+}
+
+#page3 {
+  position: absolute;
+  top: 155px;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#page3>p {
+  top: 102%;
+  font-size: 35px;
+  font-weight: 700;
+  width: 60%;
+  line-height: 45px;
+  text-align:center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#page3 img {
+  position: absolute;
+  height: 60px;
+}
+#page3 #colon1 {
+  top: 34%;
+  left: 17%;
+}
+
+#page3 #colon2 {
+  bottom: 26%;
+  right: 15%;
+}
+
+#page4 {
+  height: 30vh;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+}
+
+.elem {
+  top: 28%;
+  height: 66%;
+  width: 24%;
+  overflow: hidden;
+  border-radius: 30px;
+  position: relative;
+}
+
+ 
+.elem  h2 {
+  height: 100%;
+  width: 100%;
+  background-color: #95c11e;
+  display: flex;
+  color: #000;
+  font-weight: 800;
+  font-family:nb;
+  align-items: center;
+  transition: all ease-in-out 0.6s;
+  justify-content: center;
+  font-size: 40px;
+  position: absolute;
+  z-index: 10;
+}
+
+ 
+ 
+.elem  img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all ease-in-out 0.5s;
+  scale:1.2;
+}
+
+.elem:hover img {
+  scale:1;
+}
+
+.elem:hover h2 {
+  color:black;
+ opacity: 1;
+  background-color: transparent;
+}
+
+#page4 h1 {
+  font-size: 100px;
+  position: absolute;
+  top: 15%;
+  font-weight: 900;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #000;
+  -webkit-text-stroke: 2px white;
+}
+
+#f {
+  height:80vh;
+  width: 100%;
+  background: linear-gradient(#000,violet);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap:  290px;
+  padding: 0 100px;
+
+}
+
+#f>img {
+  position: absolute;
+  left: 0;
+  height: 90%;
+  width: 20%;
+  z-index: 0;
+}
+
+#f1 img {
+  height: 130px;
+}
+#f1,#f2,#f3,#f4 {
+  width: fit-content;
+  position: relative;
+  /* z-index: 2; */
+}
+
+#f2 h3 {
+  font-size: 1.3w;
+  white-space:nowrap;
+  text-transform: uppercase;
+  color: cyan;
+  font-family: nb;
+  font-weight: 900;
+  margin-bottom: 8px;
+  margin-left: 13px;
+  line-height: 40px;
+}
+
+#f2 h1 {
+
+  font-weight: bolder;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #3498db;
+  
+  
+  font-style: italic;
+}
+
+#f3 h3 {
+  font-size: 1.3vw;
+  white-space:nowrap;
+  text-transform: uppercase;
+  color:#95c11e;
+  font-family: nb;
+  font-weight: 900;
+  margin-bottom: 8px;
+  margin-left: 13px;
+  line-height: 40px;
+}
+
+
+ 
+#f3 h1 {
+
+  font-weight: bolder;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #3498db;
+  font-style: italic;
+}
+
+#f4 h4 {
+  font-size: 1.3vw;
+  white-space:nowrap;
+  /* text-transform: uppercase; */
+  color:white;
+  font-family: nb;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-left: 13px;
+  line-height: 48px;
+}
+/* 
+#im {
+  height: 40vh;
+  width: 300vh;
+} */
+#im img{
+  position:absolute;
+  width:323px;
+  top: 30%;
+  left:-4%;
+  height: 190px;
+}
+
+ 
+#im #im1{
+  position:absolute;
+  width:383px;
+  top: 46%;
+  left:67%;
+  height: 300px;
+}
+
+#im h3 {
+  position:absolute;
+  top: 49%;
+  left:24%;
+  font-size: 33px;
+  font-family: nb;
+  line-height: 54px;
+  font-weight: 900;
+  font-style: italic;
+  color: #3498db;
+
+}
+#subham1 h3{
+
+  position: absolute;
+  top: 42%;
+  left: 54%;
+  font-size:25px;
+  font-family: nb;
+  line-height: 54px;
+  color: #3498db;
+}
+ 
+#subham  img {
+  height: 40%;
+  width: 17%;
+  object-fit:cover;
+  background-position: center;
+  opacity: 1;
+  top: 36%;
+  left: 29%;
+  border-radius: 30%;
+  box-shadow: 0 0 10px 10px #3498db; 
+  object-fit: cover;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#subham:hover img{
+  box-shadow: none;
+}
+
+ 
+#bottom {
+  position: relative;
+  top: 5%;
+  left: 3%;
+  height: 20vh;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 90px;
+  /* background-size:cover;
+  background-position: center; */
+  z-index: 10;
+}
+
+
+#bottom  #arrow1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  left: 10%;
+}
+
+ 
+.c{
+  height: 250%;
+  width: 34%;
+  /* background-color: blue; */
+  border-radius: 70px;
+  overflow: hidden;
+  background-size:cover;
+  background-position: center;
+  transition: all ease 0.6s;
+
+}
+
+#c1 {
+  background-image: url(k.jfif);
+  background-size:cover;
+  background-position:bottom;
+}
+
+
+#c1:hover {
+  transform: rotate3d(1,-1,0,20deg);
+}
+
+
+
+#c3 {
+  background-image: url(rishikesh.jpg);
+  background-size:cover;
+  background-position: center;
+}
+
+ 
+#c3:hover {
+  transform: rotate3d(-1,-1,0,20deg);
+}
+
+ 
+#c2 {
+  background-image: url(sikki.jpg);
+  background-size:cover;
+  background-position: center;
+}
+
+
+#c2:hover {
+  transform: rotate3d(-1,-1,-1,20deg);
+}
+.over {
+  height: 100%;
+  width: 150%;
+  background-color:#3498db;
+  padding: 30px;
+  padding-top: 100px;
+  opacity:0;
+  /* transition:all ease-in 0.6s; */
+
+}
+
+
+.over p {
+  color: #000;
+  font-size: 16px;
+  font-family:nb;
+  font-weight: 800;
+  scale: 1;
+ 
+}
+
+.over h4 {
+  color: #000;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: nb;
+  margin-bottom: 20px;
+}
+
+.c:hover p{
+  scale: 1.1;
+  transition: all ease-in 0.5s;
+}
+
+.c:hover .over{
+  opacity: 1;
+}
+#bottom #b1 {
+  position: absolute;
+  background-color:#3498db;
+  color: black;
+  top: 193%;
+  left: 17%;
+  width: 9vw;
+  height: 6vh;
+  border-radius: 10px;
+  font-family: nb;
+  font-weight:bolder;
+  font-size: 15px;
+}
+ 
+#bottom #b1:hover{
+  cursor: pointer;
+
+}
+
+#bottom #b2 {
+  position: absolute;
+  background-color:#3498db;
+
+  color:black;
+  top: 193%;
+  left: 50%;
+  width: 9vw;
+  height: 6vh;
+  border-radius: 10px;
+  font-family: nb;
+  font-weight:bolder;
+  font-size: 15px;
+  
+ 
+}
+#bottom #b3 {
+  position: absolute;
+  background-color:#3498db;
+  color: black;
+  top: 193%;
+  left: 82%;
+  width: 9vw;
+  height: 6vh;
+  border-radius: 10px;
+  font-family: nb;
+  font-weight:bolder;
+  text-decoration: none;
+  list-style: none;
+  font-size: 15px;
+  
+ 
+ }
+/* 
+#package  button
+{  
+  position:absolute;
+  top: 34.5%;
+  border-radius: 10px;
+  width: 9vw;
+  height: 6vh;
+  color:#000;
+  font-size: 17px;
+  font-weight:400; */
+  /* overflow: hidden; */
+  /* background-color:#3498db;
+  left: 50.5%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  /* border: 1px solid black; */
+
+/* 
+#package button:hover{
+  cursor: pointer;
+} */ 
+
+#down {
+  height:100vh;
+  width: 100%;
+  background: linear-gradient(violet,black);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap:  290px;
+  padding: 0 100px;
+
+}
+
+#d1 h1 {
+  margin-top:20px;
+
+  color: #000;
+  font-weight: 900;
+  font-family: nb;
+  display: flex;
+  flex-direction: row;
+}
+
+#d1 h3 {
+  margin-top: 5px;
+  width:140%;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ 
+#d2 h1 {
+  position: relative;
+  margin-top: 23px;
+  left: -130%;
+  color: #000;
+  font-weight: 900;
+  font-family: nb;
+}
+
+#d2 h3 {
+  line-height:  25px;
+  position: relative;
+  left: -100%;
+  margin-top: 15px;
+  width: 25%;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#d3 h1 {
+
+
+  position: relative;
+  margin-top: 23px;
+  left: -230%;
+  color: #000;
+  font-weight: 900;
+  font-family: nb;
+}
+
+#d3 h3 {
+  line-height:  25px;
+  position: relative;
+  left: -200%;
+  margin-top: -5px;
+  width: 25%;
+  color:#fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+#d4 {
+  position: relative;
+  display: flex;
+  left: -20%;
+  justify-content:center;
+  flex-direction: column;
+}
+ 
+#d4 h1 {
+
+
+  position: relative;
+  margin-top: 25px;
+  left: 9%;
+  margin-bottom: 3rem;
+  color: #000;
+  font-weight: 900;
+  font-family: nb;
+}
+
+#copyright h3 {
+  top: 99.4%;
+  position: absolute;
+  overflow: hidden;
+  left: 25%;
+  color:blueviolet;
+  font-family:nb;
+  font-weight: bolder;
+}
