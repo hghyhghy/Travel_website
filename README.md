@@ -1,6 +1,6 @@
 # Travel_website      
 
-1. check node version
+1. check node version 
 
        node --version
 
