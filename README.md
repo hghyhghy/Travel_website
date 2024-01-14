@@ -21,3 +21,8 @@
 🔴🔴 GSAP SCROLLTRIGGER FOR ANIMATION
 
        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+🔴🔴 TYPE JS FOR TYPING ANIMATION
+
+      <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
